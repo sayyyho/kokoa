@@ -13,6 +13,7 @@ const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => console.log(`test PORT ${PORT}`));
 
 io.on("connection", (socket)=>{
+    console.log("connect");
     socket.on("mychat", (data)=>{
         const {name ,msg} = data;
         io.emit("mychat", {
