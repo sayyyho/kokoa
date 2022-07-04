@@ -8,7 +8,7 @@ const io = socketIo(server);
 const moment = require("moment");
 
 app.use(express.static(path.join(__dirname, "src"))) //__dirname이 프로젝트 폴더 가리킴
-const PORT = 4040;
+const PORT = process.env.PORT || 3000;
 
 server.listen(PORT, () => console.log(`test PORT ${PORT}`));
 
