@@ -15,6 +15,7 @@ function send(){
         msg : chatInput.value,
     }
     socket.emit("mychat", para);
+    console.log("enter");
 }
 
 sendButton.addEventListener("click", send)
